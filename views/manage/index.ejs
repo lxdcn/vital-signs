@@ -2,12 +2,12 @@
 
     <ul class="nav nav-tabs" ng-controller="navCtr">
         <li ng-class="{true:'active'}[active=='/home']">
-            <a href="#/home" ng-click="active='/home';">Home</a>
+            <a href="#/home" ng-click="active='/home';">主页</a>
         </li>
         <li ng-class="{true:'active'}[active.indexOf('/project')!==-1]">
-            <a ng-click="active='/project';" href="#/project">project</a></li>
+            <a ng-click="active='/project';" href="#/project">项目</a></li>
         <li ng-class="{true:'active'}[active=='/plugins']">
-            <a ng-click="active='/plugins';" href="#/plugins">plugins</a></li>
+            <a ng-click="active='/plugins';" href="#/plugins">插件</a></li>
         <!--<li ng-class="{true:'active'}[active=='/npm']">-->
             <!--<a href="#/npm" ng-click="active='/npm';">npm plugins</a></li>-->
     </ul>

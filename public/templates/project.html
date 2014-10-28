@@ -4,24 +4,24 @@
 
 <hr/>
 <fieldset>
-    <legend>Add project</legend>
+    <legend>添加一个工程</legend>
     <form class="form-horizontal" name="projectForm" novalidate>
         <div class="control-group" ng-class="{true:'error'}[projectForm.$invalid]">
-            <label class="control-label" for="projectName">Npm plugin name</label>
+            <label class="control-label" for="projectName">工程名</label>
 
             <div class="controls">
                 <input type="text" class="input input-xxlarge" placeholder="Typing project name..."
                        id="projectName" name="projectName" ng-model="projectName" required="true"
                        ui-validate="{'unique':'notUnique($value)'}">
-                <span class="help-block" ng-show="projectForm.projectName.$error.required">Name is required!</span>
+                <span class="help-block" ng-show="projectForm.projectName.$error.required">项目名不能为空</span>
                     <span class="help-block"
-                          ng-show="projectForm.projectName.$error.unique">Name is must be unique!</span>
+                          ng-show="projectForm.projectName.$error.unique">项目名子不能重复!</span>
 
             </div>
         </div>
         <div class="text-right">
             <input type="button" class="btn btn-primary" ng-disabled="projectForm.$invalid|| !projectForm.$dirty"
-                   value="Add" ng-click="addProject();">
+                   value="添加" ng-click="addProject();">
         </div>
         <div>{{result}}</div>
     </form>
