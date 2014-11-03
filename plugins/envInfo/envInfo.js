@@ -16,7 +16,6 @@ app.directive("envInfo", ["proxy", "timer", "$timeout", function (proxy, timer, 
                         c.inUse = true;
                         c.ip = c.url;
 
-
                         c.img = new Image();
 
                         c.img.onload = function() {
@@ -32,11 +31,11 @@ app.directive("envInfo", ["proxy", "timer", "$timeout", function (proxy, timer, 
 
                         c.start = new Date().getTime();
                         c.img.src = "http://" + c.ip;
-                        // c.timer = setTimeout(function() {
-                        //     if (c.inUse) {
-                        //         c.result = false; c.inUse = false;
-                        //     }
-                        // }, 1500);
+                        c.timer = setTimeout(function() {
+                            if (c.inUse) {
+                                c.result = false; c.inUse = false;
+                            }
+                        }, 1500);
 
                     }
 
